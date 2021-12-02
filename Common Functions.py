@@ -187,26 +187,9 @@ def heatMap(y_test,y_pred):
 def getFeatureWeights(data,coef):
     """
     Creates a Panda's dataframe with weights of all the features of a model
-    takes data and 
     """
     features = coef[0]
     columns = data.drop(['Attrition'],axis=1).columns
     parameters = pd.DataFrame(data = features, columns = ['Weight'],index = columns)
     return parameters
-
-
-# In[21]:
-
-
-path = "F:\\ML\\Data\\"
-file = "Nifty_data_for_linear_regression.xlsx"
-
-data = loadData(path,file)
-data.head()
-
-
-# In[ ]:
-
-
-
 
